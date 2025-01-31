@@ -1,0 +1,82 @@
+/* Contenedor general */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 64px); /* Ajuste para incluir el espacio del Navbar */
+    background-color: #f0f8ff; /* Fondo azul claro */
+    margin-top: 10px;
+  }
+  
+  /* Tarjeta de registro */
+  .register-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* Título */
+  .register-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0e2954; /* Azul oscuro */
+    margin-bottom: 20px;
+  }
+  
+  /* Etiquetas */
+  .register-label {
+    display: block;
+    text-align: left;
+    font-size: 0.95rem;
+    color: #6b7280; /* Gris claro */
+    margin-bottom: 8px;
+  }
+  
+  /* Campos de entrada */
+  .register-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  /* Botón */
+  .register-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a73e8; /* Azul */
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .register-button:hover {
+    background-color: #0c5acf;
+  }
+  
+  /* Footer */
+  .register-footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #6b7280;
+  }
+  
+  .register-footer a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .register-footer a:hover {
+    text-decoration: underline;
+  }
+  
