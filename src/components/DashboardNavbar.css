@@ -70,30 +70,35 @@
 .user-icon {
   position: relative;
 }
-
 .dropdown-menu {
   position: absolute;
   top: 40px;
   right: 0;
-  background: white;
-  color: #0e2954;
+  background: white; /* Fondo blanco */
+  color: #0e2954; /* Texto azul oscuro */
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   z-index: 1000;
+  min-width: 150px;
 }
 
 .dropdown-menu a {
   display: block;
   padding: 10px;
   text-decoration: none;
-  color: #0e2954;
+  color: #0e2954; /* Azul oscuro para el texto */
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dropdown-menu a:hover {
-  background-color: #f0f4f8;
+  background-color: #f0f4f8; /* Fondo gris claro en hover */
+  color: #03132c; /* Texto más oscuro en hover */
   border-radius: 5px;
 }
+
+
 
 /* Responsividad para pantallas pequeñas */
 @media (max-width: 768px) {
@@ -117,44 +122,44 @@
 }
 /* Menú de usuario */
 .user-icon {
-  position: relative;
+    position: relative;
 }
 
 .dropdown-menu {
-  position: absolute;
-  top: 40px;
-  right: 0;
-  background: white;
-  color: #0e2954;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  min-width: 150px;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: white;
+    color: #0e2954;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    min-width: 150px;
 }
 
 .dropdown-menu a {
-  display: block;
-  padding: 10px;
-  text-decoration: none;
-  color: #0e2954;
-  font-size: 0.9rem;
-  transition: background-color 0.3s ease;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #0e2954;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
 }
 
 .dropdown-menu a:hover {
-  background-color: #f0f4f8;
-  border-radius: 5px;
+    background-color: #f0f4f8;
+    border-radius: 5px;
 }
 
 /* Icono de usuario */
 .user-icon button {
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
 
 .user-icon button:hover {
-  color: #4185f4; /* Azul más claro */
+    color: #4185f4; /* Azul más claro */
 }

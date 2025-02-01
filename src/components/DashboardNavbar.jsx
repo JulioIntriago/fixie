@@ -1,4 +1,3 @@
-// src/components/DashboardNavbar.jsx
 import { useState } from "react";
 import { FaBars, FaBell, FaPlus, FaUserCircle } from "react-icons/fa";
 import "./DashboardNavbar.css";
@@ -13,36 +12,28 @@ const DashboardNavbar = ({ onToggleSidebar }) => {
 
   const handleLogout = () => {
     console.log("Cerrar sesión");
+    // Aquí podrías redirigir al usuario o limpiar el estado de autenticación.
   };
 
   return (
     <nav className="dashboard-navbar">
-      {/* Menú Hamburguesa */}
       <button className="menu-toggle" onClick={onToggleSidebar}>
         <FaBars size={20} />
       </button>
 
-      {/* Logo */}
       <div className="logo">Fixie</div>
 
-      {/* Barra de búsqueda */}
       <div className="search-bar">
         <input type="text" placeholder="Buscar en órdenes, clientes, IMEI" />
       </div>
 
-      {/* Acciones */}
       <div className="actions">
-        {/* Botón "Agregar" */}
         <button className="action-btn">
           <FaPlus size={20} />
         </button>
-
-        {/* Botón "Notificaciones" */}
         <button className="action-btn">
           <FaBell size={20} />
         </button>
-
-        {/* Menú del Usuario */}
         <div className="user-icon">
           <button className="action-btn" onClick={toggleDropdown}>
             <FaUserCircle size={24} />
@@ -50,7 +41,9 @@ const DashboardNavbar = ({ onToggleSidebar }) => {
           {isDropdownOpen && (
             <div className="dropdown-menu">
               <a href="/admin">Administración</a>
-              <button onClick={handleLogout}>Cerrar sesión</button>
+              <a href="#" onClick={handleLogout}>
+                Cerrar sesión
+              </a>
             </div>
           )}
         </div>
