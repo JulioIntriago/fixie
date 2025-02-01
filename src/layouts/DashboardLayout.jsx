@@ -1,31 +1,20 @@
 // src/layouts/DashboardLayout.jsx
-import { Outlet, Navigate } from 'react-router-dom';
-import { supabase } from '../services/supabaseClient';
-import { useEffect, useState } from 'react';
-import Sidebar from '../components/Sidebar';
-import Navbar from '../components/Navbar';
+import { useState } from "react";
+import DashboardNavbar from "../components/DashboardNavbar";
+import Sidebar from "../components/Sidebar";
+import "./DashboardLayout.css";
 
-const DashboardLayout = () => {
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    const fetchUser = async () => {
-      const { data } = await supabase.auth.getUser();
-      setUser(data.user);
-    };
-    fetchUser();
-  }, []);
-
-  // Si no hay usuario, redirigir al login
-  if (!user) return <Navigate to="/login" />;
+// eslint-disable-next-line react/prop-types
+const DashboardLayout = ({ children }) => {
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
 
   return (
-    <div className="flex">
-      <Sidebar />
-      <div className="flex-1">
-        <Navbar />
-        <main className="p-4">
-          <Outlet />
+    <div className="dashboard-layout">
+      <DashboardNavbar onToggleSidebar={() => setIsSidebarCollapsed(!isSidebarCollapsed)} />
+      <div className="dashboard-body">
+        <Sidebar isCollapsed={isSidebarCollapsed} />
+        <main className={`main-content ${isSidebarCollapsed ? "collapsed" : ""}`}>
+          {children}
         </main>
       </div>
     </div>

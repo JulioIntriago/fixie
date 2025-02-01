@@ -1,0 +1,160 @@
+/* src/components/DashboardNavbar.css */
+
+/* Navbar general */
+.dashboard-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #0e2954; /* Azul oscuro */
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Menú hamburguesa */
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Barra de búsqueda */
+.search-bar {
+  flex: 1;
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centra la barra de búsqueda */
+}
+
+.search-bar input {
+  width: 60%; /* Reduce el ancho al 60% */
+  max-width: 500px; /* Limita el ancho máximo */
+  padding: 8px 15px; /* Reduce el padding */
+  border: none;
+  border-radius: 20px;
+  font-size: 0.9rem; /* Reduce el tamaño de fuente */
+  text-align: center;
+}
+
+/* Acciones del lado derecho */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-btn:hover {
+  color: #4185f4; /* Azul más claro */
+}
+
+/* Menú de usuario */
+.user-icon {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  color: #0e2954;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #0e2954;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f4f8;
+  border-radius: 5px;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .dashboard-navbar {
+      flex-wrap: wrap;
+  }
+
+  .search-bar {
+      width: 100%;
+      margin: 10px 0;
+      justify-content: flex-start; /* Cambia para alinear en pantallas pequeñas */
+  }
+
+  .search-bar input {
+      width: 100%; /* Barra de búsqueda ocupa todo el ancho */
+  }
+
+  .actions {
+      gap: 10px;
+  }
+}
+/* Menú de usuario */
+.user-icon {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  color: #0e2954;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  min-width: 150px;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #0e2954;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f4f8;
+  border-radius: 5px;
+}
+
+/* Icono de usuario */
+.user-icon button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.user-icon button:hover {
+  color: #4185f4; /* Azul más claro */
+}

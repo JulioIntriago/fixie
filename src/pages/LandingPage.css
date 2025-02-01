@@ -1,83 +1,86 @@
 /* src/styles/LandingPage.css */
 
-/* Estilo general de la página */
 .landing-page {
-    font-family: "Arial", sans-serif;
-    background-color: #f8fafc; /* Fondo claro */
-    color: #0e2954; /* Azul oscuro */
-  }
-  
-  /* Hero Section */
-  .hero-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #f0f4f8; /* Azul muy claro */
-    gap: 20px;
-  }
-  
-  .hero-section .hero-content {
-    max-width: 600px;
-  }
-  
-  .hero-section h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .hero-section h1 .highlight {
-    color: #1a73e8; /* Azul vibrante */
-  }
-  
-  .hero-section .subtext {
-    font-size: 1.25rem;
-    color: #6b7280; /* Gris claro */
-    margin-bottom: 20px;
-  }
-  
-  /* Botones de CTA */
-  .cta-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .cta-buttons .btn-primary {
-    background-color: #1a73e8; /* Azul vibrante */
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: background-color 0.3s;
-  }
-  
-  .cta-buttons .btn-primary:hover {
-    background-color: #0c5acf; /* Azul más oscuro */
-  }
-  
-  .cta-buttons .trial-text {
-    font-size: 0.875rem;
-    color: #6b7280; /* Gris claro */
-    font-weight: 600;
-    margin-top: 10px;
-  }
-  
-  /* Hero Image */
-  .hero-section .hero-image {
-    margin-top: 20px;
-  }
-  
-  .hero-section .software-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  }
-  
+  font-family: "Arial", sans-serif;
+  background-color: #f8fafc;
+  color: #0e2954;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f0f4f8;
+  gap: 30px;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-section h1 .highlight {
+  color: #1a73e8;
+}
+
+.hero-section .subtext {
+  font-size: 1.25rem;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-primary {
+  background-color: #1a73e8;
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0c5acf;
+  transform: translateY(-2px);
+}
+
+.trial-text {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.hero-image {
+  margin-top: 20px;
+}
+
+.software-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.software-image:hover {
+  transform: scale(1.05);
+}
