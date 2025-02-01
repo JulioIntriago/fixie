@@ -1,30 +1,46 @@
-/* src/layouts/DashboardLayout.css */
-
 .dashboard-layout {
   display: flex;
   flex-direction: column;
   height: 100vh;
 }
 
+.dashboard-content {
+  display: flex;
+  flex: 1;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f8fafc;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar-open {
+  margin-left: 240px;
+}
+/* Layout general */
+.dashboard-layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
 .dashboard-body {
   display: flex;
-  flex-grow: 1;
+  flex: 1;
+  overflow: hidden;
 }
 
 /* Contenido principal */
 .main-content {
-  flex-grow: 1;
+  flex: 1;
+  background-color: #f8fafc;
+  overflow-y: auto;
   padding: 20px;
-  margin-left: 240px;
   transition: margin-left 0.3s ease;
 }
 
 .main-content.collapsed {
-  margin-left: 60px;
-}
-
-@media (max-width: 768px) {
-  .main-content {
-    margin-left: 0;
-  }
+  margin-left: 60px; /* Ajuste cuando el sidebar está colapsado */
 }

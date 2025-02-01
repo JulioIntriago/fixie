@@ -1,17 +1,9 @@
 // src/components/Sidebar.jsx
 import PropTypes from "prop-types";
-import {
-  FaHome,
-  FaBox,
-  FaUsers,
-  FaTruck,
-  FaWrench,
-  FaChartBar,
-  FaBook,
-} from "react-icons/fa";
+import { FaHome, FaBox, FaUsers, FaTruck, FaWrench, FaChartBar, FaBook } from "react-icons/fa";
 import "./Sidebar.css";
 
-const Sidebar = ({ isCollapsed, isHidden }) => {
+const Sidebar = ({ isCollapsed }) => {
   const menuItems = [
     { icon: <FaHome />, label: "Inicio", path: "/dashboard" },
     { icon: <FaBox />, label: "Órdenes", path: "/dashboard/orders" },
@@ -23,20 +15,14 @@ const Sidebar = ({ isCollapsed, isHidden }) => {
   ];
 
   return (
-    <aside
-      className={`sidebar ${isCollapsed ? "collapsed" : ""} ${
-        isHidden ? "hidden" : ""
-      }`}
-    >
+    <aside className={`sidebar ${isCollapsed ? "collapsed" : ""}`}>
       <nav>
         <ul className="sidebar-menu">
           {menuItems.map((item, index) => (
             <li key={index} className="menu-item">
               <a href={item.path} className="menu-link">
                 <span className="menu-icon">{item.icon}</span>
-                {!isCollapsed && !isHidden && (
-                  <span className="menu-label">{item.label}</span>
-                )}
+                {!isCollapsed && <span className="menu-label">{item.label}</span>}
               </a>
             </li>
           ))}
@@ -48,7 +34,6 @@ const Sidebar = ({ isCollapsed, isHidden }) => {
 
 Sidebar.propTypes = {
   isCollapsed: PropTypes.bool.isRequired,
-  isHidden: PropTypes.bool.isRequired,
 };
 
 export default Sidebar;

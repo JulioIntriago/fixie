@@ -1,21 +1,22 @@
 /* Sidebar base */
 .sidebar {
-  background-color: #03132c;
-  color: white;
-  width: 240px;
-  height: 100vh; /* Ocupa toda la pantalla */
+  background-color: #0e2954;
+  color: hsl(0, 0%, 100%);
+  width: 160px; /* Ancho deseado */
+  height: 100vh;
   position: fixed;
   left: 0;
   overflow-y: auto;
-  transition: transform 0.3s ease, width 0.3s ease;
+  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
   z-index: 1000;
 }
 
+
 /* Sidebar colapsado */
 .sidebar.collapsed {
-  width: 60px; /* Solo muestra íconos */
+  width: 40px; /* Solo muestra íconos */
 }
 
 /* Sidebar oculto en pantallas pequeñas */
