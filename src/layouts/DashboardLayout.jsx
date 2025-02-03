@@ -1,3 +1,5 @@
+// src/layouts/DashboardLayout.jsx
+
 import { useState, useRef, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import DashboardNavbar from "../components/DashboardNavbar";
@@ -6,30 +8,40 @@ import "./DashboardLayout.css";
 
 const DashboardLayout = () => {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
-  const sidebarRef = useRef(null); // Referencia para el Sidebar
 
-  // Función para detectar clics fuera del sidebar
+  // Antes apuntaba directamente al Sidebar, pero ahora apuntará al contenedor <div>
+  const sidebarRef = useRef(null);
+
+  // Detectar clic fuera del contenedor que envuelve el sidebar
   const handleClickOutside = (event) => {
     if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
-      setIsSidebarCollapsed(true); // Colapsa el sidebar si el clic está fuera
+      // Si el clic NO ocurre dentro de sidebarRef, colapsa el sidebar
+      setIsSidebarCollapsed(true);
     }
   };
 
   useEffect(() => {
-    // Agrega el evento al montar el componente
+    // Suscribirse al evento mousedown al montar
     document.addEventListener("mousedown", handleClickOutside);
+
+    // Limpiar el evento al desmontar
     return () => {
-      // Remueve el evento al desmontar el componente
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
   return (
     <div className="dashboard-layout">
-      <DashboardNavbar onToggleSidebar={() => setIsSidebarCollapsed(!isSidebarCollapsed)} />
+      <DashboardNavbar
+        onToggleSidebar={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
+      />
+
       <div className="dashboard-body">
-        {/* Pasamos la referencia al Sidebar */}
-        <Sidebar ref={sidebarRef} isCollapsed={isSidebarCollapsed} />
+        {/* Envuelve Sidebar dentro de un div al que le ponemos la ref */}
+        <div ref={sidebarRef}>
+          <Sidebar isCollapsed={isSidebarCollapsed} />
+        </div>
+
         <main className={`main-content ${isSidebarCollapsed ? "collapsed" : ""}`}>
           <Outlet />
         </main>

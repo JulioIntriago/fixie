@@ -2,12 +2,12 @@
 .sidebar {
   background-color: #0e2954;
   color: hsl(0, 0%, 100%);
-  width: 160px; /* Ancho deseado */
+  width: 200px; /* Ancho deseado */
   height: 100vh;
   position: fixed;
   left: 0;
   overflow-y: auto;
-  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+  transition: width 0.3s;
   display: flex;
   flex-direction: column;
   z-index: 1000;
@@ -16,7 +16,7 @@
 
 /* Sidebar colapsado */
 .sidebar.collapsed {
-  width: 40px; /* Solo muestra íconos */
+  width: 60px; /* Solo muestra íconos */
 }
 
 /* Sidebar oculto en pantallas pequeñas */
