@@ -1,8 +1,14 @@
-// src/components/Sidebar.jsx
+// Sidebar.jsx (sin forwardRef)
 import PropTypes from "prop-types";
-import { FaHome, FaBox, FaUsers, FaTruck, FaWrench, FaChartBar, FaBook } from "react-icons/fa";
- // O NavLink para marcar enlace activo
-
+import {
+  FaHome,
+  FaBox,
+  FaUsers,
+  FaTruck,
+  FaWrench,
+  FaChartBar,
+  FaBook,
+} from "react-icons/fa";
 import "./Sidebar.css";
 
 const Sidebar = ({ isCollapsed }) => {
@@ -33,7 +39,6 @@ const Sidebar = ({ isCollapsed }) => {
     </aside>
   );
 };
-Sidebar.displayName = "Sidebar"; // Opcional: para que React devtools muestre un nombre claro
 
 Sidebar.propTypes = {
   isCollapsed: PropTypes.bool.isRequired,

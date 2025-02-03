@@ -1,5 +1,4 @@
-// src/layouts/DashboardLayout.jsx
-
+// DashboardLayout.jsx
 import { useState, useRef, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import DashboardNavbar from "../components/DashboardNavbar";
@@ -8,23 +7,27 @@ import "./DashboardLayout.css";
 
 const DashboardLayout = () => {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+  const sidebarRef = useRef(null); // Referencia para el contenedor del Sidebar
 
-  // Antes apuntaba directamente al Sidebar, pero ahora apuntará al contenedor <div>
-  const sidebarRef = useRef(null);
+  // Función para detectar clics fuera del sidebar
 
-  // Detectar clic fuera del contenedor que envuelve el sidebar
   const handleClickOutside = (event) => {
-    if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
-      // Si el clic NO ocurre dentro de sidebarRef, colapsa el sidebar
-      setIsSidebarCollapsed(true);
+    // 1) Si hiciste clic dentro del contenedor que envuelve el Sidebar, no colapsar
+    if (sidebarRef.current && sidebarRef.current.contains(event.target)) {
+      return;
     }
+  
+    // 2) Si hiciste clic en el botón hamburguesa (clase menu-toggle), no colapsar
+    if (event.target.closest(".menu-toggle")) {
+      return; 
+    }
+  
+    // 3) En cualquier otro caso, colapsa
+    setIsSidebarCollapsed(true);
   };
-
+  
   useEffect(() => {
-    // Suscribirse al evento mousedown al montar
     document.addEventListener("mousedown", handleClickOutside);
-
-    // Limpiar el evento al desmontar
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
@@ -32,16 +35,14 @@ const DashboardLayout = () => {
 
   return (
     <div className="dashboard-layout">
-      <DashboardNavbar
-        onToggleSidebar={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
-      />
-
+      <DashboardNavbar onToggleSidebar={() => setIsSidebarCollapsed(!isSidebarCollapsed)} />
+      
       <div className="dashboard-body">
-        {/* Envuelve Sidebar dentro de un div al que le ponemos la ref */}
+        {/* Usa un <div> que envuelve al Sidebar y aplica la ref ahí */}
         <div ref={sidebarRef}>
           <Sidebar isCollapsed={isSidebarCollapsed} />
         </div>
-
+        
         <main className={`main-content ${isSidebarCollapsed ? "collapsed" : ""}`}>
           <Outlet />
         </main>
