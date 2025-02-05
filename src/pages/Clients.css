@@ -1,0 +1,125 @@
+.clients-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f8fafc; /* Fondo claro */
+  }
+  
+  /* Encabezado */
+  .clients-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Ajuste para pantallas pequeñas */
+  }
+  
+  .clients-header h1 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .clients-actions .btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    background-color: #e3f2fd; /* Azul claro */
+    color: #4185f4; /* Azul principal */
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .clients-actions .btn:hover {
+    background-color: #4185f4;
+    color: white;
+  }
+  
+  .clients-actions .btn.primary {
+    background-color: #4185f4;
+    color: white;
+  }
+  
+  /* Barra de búsqueda */
+  .search-bar {
+    margin-bottom: 20px;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  /* Tabla */
+  .clients-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    border-radius: 5px; /* Bordes redondeados */
+    overflow: hidden;
+  }
+  
+  .clients-table th,
+  .clients-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 0.9rem;
+  }
+  
+  .clients-table th {
+    background-color: #4185f4;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .clients-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Rayado alternativo */
+  }
+  
+  .clients-table tr:hover {
+    background-color: #eef6fc; /* Efecto hover */
+  }
+  
+  .clients-table .btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.8rem;
+  }
+  
+  .clients-table .btn.view-orders {
+    background-color: #e3f2fd; /* Azul claro */
+    color: #4185f4;
+  }
+  
+  .clients-table .btn.view-orders:hover {
+    background-color: #4185f4;
+    color: white;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .clients-header {
+      flex-direction: column; /* Ajusta a columna */
+      align-items: flex-start;
+    }
+  
+    .clients-actions {
+      margin-top: 10px;
+    }
+  
+    .clients-table table {
+      font-size: 0.8rem; /* Reduce el tamaño en pantallas pequeñas */
+    }
+  
+    .search-bar input {
+      font-size: 0.9rem; /* Ajusta el tamaño de texto */
+    }
+  }
+  

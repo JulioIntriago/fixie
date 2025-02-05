@@ -1,0 +1,110 @@
+.providers-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f8fafc; /* Fondo claro */
+  }
+  
+  /* Encabezado */
+  .providers-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Ajuste en pantallas pequeñas */
+  }
+  
+  .providers-header h1 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .providers-header .btn.primary {
+    padding: 10px 15px;
+    background-color: #4185f4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .providers-header .btn.primary:hover {
+    background-color: #316dc6; /* Azul más oscuro en hover */
+  }
+  
+  /* Barra de búsqueda */
+  .search-bar {
+    margin-bottom: 20px;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  /* Tabla */
+  .providers-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    border-radius: 5px; /* Bordes redondeados */
+    overflow: hidden;
+  }
+  
+  .providers-table th,
+  .providers-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 0.9rem;
+  }
+  
+  .providers-table th {
+    background-color: #4185f4;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .providers-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Rayado alternativo */
+  }
+  
+  .providers-table tr:hover {
+    background-color: #eef6fc; /* Efecto hover */
+  }
+  
+  .providers-table a {
+    color: #4185f4;
+    text-decoration: none;
+  }
+  
+  .providers-table a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .providers-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .providers-header .btn.primary {
+      margin-top: 10px;
+    }
+  
+    .search-bar input {
+      font-size: 0.9rem;
+    }
+  
+    .providers-table table {
+      font-size: 0.8rem;
+    }
+  }
+  

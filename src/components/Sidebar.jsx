@@ -18,7 +18,7 @@ const Sidebar = ({ isCollapsed }) => {
     { icon: <FaUsers />, label: "Clientes", path: "/dashboard/clients" },
     { icon: <FaTruck />, label: "Proveedores", path: "/dashboard/providers" },
     { icon: <FaWrench />, label: "Servicios", path: "/dashboard/services" },
-    { icon: <FaChartBar />, label: "Finanzas", path: "/dashboard/finances" },
+    { icon: <FaChartBar />, label: "Finanzas", path: "/dashboard/finance" },
     { icon: <FaBook />, label: "Tutoriales", path: "/dashboard/tutorials" },
   ];
 

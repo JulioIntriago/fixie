@@ -1,0 +1,117 @@
+.services-page {
+    display: flex;
+    flex-direction: column;
+    height: 70vh; /* Mayor altura para aprovechar más espacio */
+    padding: 15px; /* Espaciado reducido */
+    font-family: Arial, sans-serif;
+    background-color: #f8fafc; /* Fondo claro */
+  }
+  
+  .services-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px; /* Reduce el margen inferior */
+    flex-wrap: wrap; /* Ajusta para pantallas pequeñas */
+  }
+  
+  .services-header h1 {
+    font-size: 1.5rem; /* Tamaño más compacto */
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .services-header .btn.primary {
+    padding: 10px 15px;
+    background-color: #4185f4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-right: 0;
+  }
+  
+  .services-header .btn.primary:hover {
+    background-color: #316dc6; /* Azul más oscuro en hover */
+  }
+  
+  .search-bar {
+    margin-bottom: 15px; /* Reduce el margen inferior */
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    transition: border-color 0.3s ease;
+  }
+  
+  .search-bar input:focus {
+    border-color: #4185f4; /* Resalta el borde al enfocar */
+    outline: none;
+  }
+  
+  .services-table {
+    flex: 4; /* Tabla ocupa el espacio restante */
+    overflow-y: auto; /* Desplazamiento si es necesario */
+  }
+  
+  .services-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    border-radius: 5px; /* Bordes redondeados */
+    overflow: hidden;
+  }
+  
+  .services-table th,
+  .services-table td {
+    padding: 10px 60px; /* Espaciado interno ajustado */
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 0.7rem; /* Aumenta el tamaño de fuente */
+  }
+  
+  .services-table th {
+    background-color: #4185f4;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .services-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Rayado alternativo */
+  }
+  
+  .services-table tr:hover {
+    background-color: #eef6fc; /* Efecto hover */
+  }
+  
+  .services-table tr td:first-child {
+    font-weight: bold; /* Resalta la primera columna */
+  }
+  
+  @media (max-width: 768px) {
+    .services-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .services-header .btn.primary {
+      margin-top: 10px;
+    }
+  
+    .search-bar input {
+      font-size: 0.9rem;
+    }
+  
+    .services-table table {
+      font-size: 0.9rem; /* Ajusta el tamaño de fuente en pantallas pequeñas */
+    }
+  }
+  
