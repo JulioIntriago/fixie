@@ -1,0 +1,63 @@
+.finance-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f8fafc;
+  }
+  
+  .tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .tab.active {
+    background-color: #4185f4;
+    color: white;
+  }
+  
+  .finance-charts {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Ajusta para pantallas pequeñas */
+  }
+  
+  .chart-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 45%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chart-container h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .chart-container p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .finance-charts {
+      flex-direction: column;
+    }
+  }
+  
